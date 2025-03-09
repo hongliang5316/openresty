@@ -15,7 +15,7 @@ local balancer = {}
 --- `balancer_by_lua*` handler via `ngx.ctx`.
 ---
 ---@param  addr    string
----@param  port    integer
+---@param  port?    integer
 ---@return boolean ok
 ---@return string? error
 function balancer.set_current_peer(addr, port) end

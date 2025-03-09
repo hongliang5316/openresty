@@ -192,11 +192,17 @@ function resolver:new(opts) end
 ---@param qname string
 ---@param opts? resty.dns.resolver.query.opts
 ---@param tries? string[]
----@return resty.dns.resolver.answer[] results
+---@return resty.dns.resolver.answers? results
 ---@return string? error
 ---@return string[]? tries
 function resolver:query(qname, opts, tries) end
 
+---@class resty.dns.resolver.answers : table
+---
+---@field errcode? resty.dns.resolver.ERRCODE # Error code returned by the DNS server
+---
+---@field errstr? resty.dns.resolver.ERRSTR # Error string returned by the DNS server
+---
 ---@class resty.dns.resolver.answer : table
 ---
 ---@field name string # The resource record name.

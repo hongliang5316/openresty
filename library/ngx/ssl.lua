@@ -286,9 +286,10 @@ function ssl.get_tls1_version_str() end
 --- This function can be called in any context.
 ---
 ---@param  pem_priv_key string
+---@param  passphrase string?
 ---@return string?      der_priv_key
 ---@return string?      error
-function ssl.priv_key_pem_to_der(pem_priv_key) end
+function ssl.priv_key_pem_to_der(pem_priv_key, passphrase) end
 
 --- Converts the PEM-formatted SSL certificate chain data into the DER format (for later uses in the set_der_cert function, for example).
 ---
